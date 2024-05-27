@@ -1,11 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
+
+const PlaceholderImage = require('./assets/background-image.png');
+
+const Tile = ({letter}) => {
+  return (
+    <View>
+      <Pressable style={{ backgroundColor: '#147EFB', padding: 10, borderRadius: 4 }}>
+        <Text> {letter} </Text>
+      </Pressable>
+    </View>
+  );
+};
+
+const Map = () => {
+
+}
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Tile letter="X" />
     </View>
   );
 }
